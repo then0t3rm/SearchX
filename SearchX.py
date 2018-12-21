@@ -24,7 +24,7 @@ print "#"*80
 for linhas in arquivo:
     linhas = linhas.rstrip('\n')
     link = url+ linhas+'/'
-    request = requests.get(link, timeout=15)
+    request = requests.get(link)
     status = request.status_code
     if status == 200:
         print "[\033[32m\033[1m+\033[0;0m] %s ==> encontrado!"%(link)
